@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Feedback Form</title>
+    <style>
+        /* Basic styling for the stars */
+        .star-rating {
+           display: inline-block;
+           font-size: 30px; /* Size of the stars */
+           direction: rtl; /* Reverse the order to allow for easier styling */
+       }
+       .star-rating input {
+           display: none; /* Hide radio buttons */
+       }
+       .star-rating label {
+           color: #ccc; /* Default color (unselected star) */
+           cursor: pointer;
+       }
+       .star-rating input:checked ~ label {
+           color: #ffcc00; /* Gold color for selected stars */
+       }
+       .star-rating input:hover ~ label {
+           color: #ffcc00; /* Gold color when hovered over */
+       }
+       .star-rating input:checked:hover ~ label {
+           color: #ffcc00;
+       }
+
+        .checked {
+                 color: orange;
+               }
+       body {
+           font-family: Arial, sans-serif;
+           margin: 20px;
+           background-color: #f8f8f8;
+           color: #333;
+       }
+       h1 {
+           text-align: center;
+           color: #ff6600;
+       }
+       .form-container {
+           max-width: 6000px;
+           margin: auto;
+           background-color: #fff;
+           padding: 20px;
+           border-radius: 8px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+       }
+       label {
+           font-weight: bold;
+       }
+       .question {
+           margin-bottom: 15px;
+       }
+       .rating input {
+           margin-right: 5px;
+       }
+       textarea {
+           width: 100%;
+           padding: 10px;
+           border-radius: 4px;
+           border: 1px solid #ccc;
+           resize: vertical;
+       }
+       .button {
+           display: block;
+           width: 100%;
+           padding: 10px;
+           background-color: #ff6600;
+           color: white;
+           border: none;
+           font-size: 16px;
+           cursor: pointer;
+           border-radius: 5px;
+       }
+       .button:hover {
+           background-color: #e65c00;
+       }
+   </style>
+</head>
+<body>
+    <h1>Conference Feedback Form</h1>
+    <form action="suggestion-conference.html">
+        <label for="conferenceTitle">Conference Title:</label>
+        <input type="text" id="conferenceTitle" name="conferenceTitle" placeholder="Enter Title"><br><br>
+
+        <label for="conferenceDate">Date:</label>
+        <input type="date" id="conferenceDate" name="conferenceDate"><br><br>
+        <!-- Question 1: How wwould you rate the overall conference? -->
+        <label>1. How would you rate the overall conference experience?</label><br>
+        <input type="radio" id="excellent" name="experience" value="Excellent">
+        <label for="excellent">Excellent</label><br>
+        <input type="radio" id="good" name="experience" value="Good">
+        <label for="good">Good</label><br>
+        <input type="radio" id="average" name="experience" value="Average">
+        <label for="average">Average</label><br>
+        <input type="radio" id="poor" name="experience" value="Poor">
+        <label for="poor">Poor</label><br><br>
+        <!-- Question 2:how would you satisfied -->
+        <label>2. How satisfied were you with the following aspects of the conference?</label><br><br>
+        <label for="speakers">Speakers (1 = Poor, 5 = Excellent):</label>
+        <input type="number" id="speakers" name="speakers" min="1" max="5" ><br>
+
+        <label for="content">Content/Topics:</label>
+        <input type="number" id="content" name="content" min="1" max="5">
+
+        <label for="networking">Networking Opportunities:</label>
+        <input type="number" id="networking" name="networking" min="1" max="5">
+
+        <label for="venue">Venue:</label>
+        <input type="number" id="venue" name="venue" min="1" max="5">
+
+        <label for="registration">Registration Process:</label>
+        <input type="number" id="registration" name="registration" min="1" max="5"><br><br>
+        <!-- Question 3: most valuble  part of the conference? -->
+        <label for="mostValuable">3. What was the most valuable part of the conference for you?</label><br>
+        <textarea id="mostValuable" name="mostValuable" rows="4" cols="50"></textarea><br><br>
+        <!-- Question 4 : future editions? -->
+        <label for="improvement">4. How can we improve the conference for future editions?</label><br>
+        <textarea id="improvement" name="improvement" rows="4" cols="50"></textarea><br><br>
+        <!-- Question 5: Recommandations -->
+        <label>5. Would you recommend this conference to others?</label><br>
+        <input type="radio" id="yesRecommend" name="recommend" value="Yes">
+        <label for="yesRecommend">Yes</label><br>
+        <input type="radio" id="noRecommend" name="recommend" value="No">
+        <label for="noRecommend">No</label><br><br>
+       <!-- Question 6: comments or suggestions? -->
+        <label for="additionalComments">6. Any other comments or suggestions?</label><br>
+        <textarea id="additionalComments" name="additionalComments" rows="4" cols="50"></textarea><br><br>
+         <!-- Question 7: Star Rating -->
+         <div class="question">
+            <label for="rating">7. Overall, how would you rate the conference event?</label><br>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label><br><br>
+            </div>
+        </div>
+
+        <center><input type="submit" value="Submit"></center>
+    </form>
+</body>
+</html>

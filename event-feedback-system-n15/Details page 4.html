@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .details-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+        .details-container h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .row {
+            margin-bottom: 20px;
+        }
+        .row label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .row input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .row button {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .row button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="details-container">
+        <h1>DETAILS</h1>
+        <form action="Feedback storing page.html" method="post" >
+            <!-- Row 1: First Name and Last Name -->
+            <div class="row">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+                
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+            </div>
+            <div class="row">
+                <button type="button" onclick="alert('Your response should be stored successfully!')">Save</button>
+            </div>
+            <!-- Row 2: Event Name -->
+            <div class="row">
+                <label for="eventName">Event name</label>
+                <select id="eventName" name="eventName" onchange="redirectToPage()">
+                    <option value="">Select an Event</option>
+                    <option value="Conference">Conference Event</option>
+                    <option value="Cultural">Cultural Event</option>
+                    <option value="General">General Event</option>
+                    <option value="Virtual">Virtual Event</option>
+                    <option value="Wedding">Wedding Event</option>
+                    <option value="Workshop">Workshop Event</option>
+                </select>
+            </div>
+
+            <!-- Row 3: Next Button -->
+           
+        </form>
+    </div>
+
+    <script>
+        function redirectToPage() {
+            var select = document.getElementById("eventName");
+            var value = select.value;
+
+            // Define corresponding links for each event type
+            var links = {
+                "Conference": "http://127.0.0.1:5500/Event%20pages.html/CONFERENCE%20EVENT/Welcome-conference.html",
+                "Cultural": "http://127.0.0.1:5500/Event%20pages.html/CULTURAL%20EVENT/Welcome%20-Cultural.html",
+                "General": "http://127.0.0.1:5500/Event%20pages.html/GENERAL%20EVENT/Welcome-general.html",
+                "Virtual": "http://127.0.0.1:5500/Event%20pages.html/VIRTUAL%20EVENT/Welcome-Virtual.html",
+                "Wedding": "http://127.0.0.1:5500/Event%20pages.html/WEDDING%20EVENT/Welcome-wedding.html",
+                "Workshop": "http://127.0.0.1:5500/Event%20pages.html/WORKSHOP%20EVENT/welcome-workshop.html"
+            };
+
+            // Check if the selected value has a corresponding link
+            if (links[value]) {
+                window.location.href = links[value];  // Redirect to the appropriate page
+            }
+        }
+    </script>
+</body>
+</html>
