@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop/Event Training Feedback Form</title>
+    <style>
+       
+
+        .checked {
+                 color: orange;
+               }
+       body {
+           font-family: Arial, sans-serif;
+           margin: 20px;
+           background-color: #f8f8f8;
+           color: #333;
+       }
+       h1 {
+           text-align: center;
+           color: #ff6600;
+       }
+       .form-container {
+           max-width: 6000px;
+           margin: auto;
+           background-color: #fff;
+           padding: 20px;
+           border-radius: 8px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+       }
+       label {
+           font-weight: bold;
+       }
+       .question {
+           margin-bottom: 15px;
+       }
+       .rating input {
+           margin-right: 5px;
+       }
+       textarea {
+           width: 100%;
+           padding: 10px;
+           border-radius: 4px;
+           border: 1px solid #ccc;
+           resize: vertical;
+       }
+       .button {
+           display: block;
+           width: 100%;
+           padding: 10px;
+           background-color: #ff6600;
+           color: white;
+           border: none;
+           font-size: 16px;
+           cursor: pointer;
+           border-radius: 5px;
+       }
+       .button:hover {
+           background-color: #e65c00;
+       }
+   </style>
+</head>
+<body>
+    <h1>Workshop & Event Training Feedback Form</h1>
+    <form>
+        <label for="workshopTitle">Workshop Title:</label>
+        <input type="text" id="workshopTitle" name="workshopTitle" placeholder="Enter Title"><br><br>
+
+        <label for="workshopDate">Date:</label>
+        <input type="date" id="workshopDate" name="workshopDate"><br><br>
+
+        <label>1. How would you rate the overall workshop/training session?</label><br>
+        <input type="radio" id="excellent" name="overall" value="Excellent">
+        <label for="excellent">Excellent</label><br>
+        <input type="radio" id="good" name="overall" value="Good">
+        <label for="good">Good</label><br>
+        <input type="radio" id="average" name="overall" value="Average">
+        <label for="average">Average</label><br>
+        <input type="radio" id="poor" name="overall" value="Poor">
+        <label for="poor">Poor</label><br><br>
+
+        <label>2. Please rate the following areas of the workshop/training:</label><br><br>
+        <label for="contentRelevance">Content Relevance (1 = Poor, 5 = Excellent):</label>
+        <input type="number" id="contentRelevance" name="contentRelevance" min="1" max="5"><br>
+        <label for="trainerKnowledge">Speaker/Trainer's Knowledge:</label>
+        <input type="number" id="trainerKnowledge" name="trainerKnowledge" min="1" max="5">
+
+        <label for="presentationStyle">Presentation Style:</label>
+        <input type="number" id="presentationStyle" name="presentationStyle" min="1" max="5">
+
+        <label for="materials">Materials Provided:</label>
+        <input type="number" id="materials" name="materials" min="1" max="5">
+
+        <label for="engagement">Interaction/Engagement:</label>
+        <input type="number" id="engagement" name="engagement" min="1" max="5"><br><br>
+
+        <label for="mostLearned">3. What did you learn most from this session?</label><br>
+        <textarea id="mostLearned" name="mostLearned" rows="4" cols="50"></textarea><br><br>
+
+        <label for="improvement">4. What could be improved in the workshop/training session?</label><br>
+        <textarea id="improvement" name="improvement" rows="4" cols="50"></textarea><br><br>
+
+        <label>5. Was the length of the workshop appropriate?</label><br>
+        <input type="radio" id="yesLength" name="length" value="Yes">
+        <label for="yesLength">Yes</label><br>
+        <input type="radio" id="tooShort" name="length" value="Too Short">
+        <label for="tooShort">Too Short</label><br>
+        <input type="radio" id="tooLong" name="length" value="Too Long">
+        <label for="tooLong">Too Long</label><br><br>
+
+        <label>6. How likely are you to apply the learnings from this session?</label><br>
+        <input type="radio" id="veryLikely" name="apply" value="Very Likely">
+        <label for="veryLikely">Very Likely</label><br>
+        <input type="radio" id="likely" name="apply" value="Likely">
+        <label for="likely">Likely</label><br>
+        <input type="radio" id="neutral" name="apply" value="Neutral">
+        <label for="neutral">Neutral</label><br>
+        <input type="radio" id="unlikely" name="apply" value="Unlikely">
+        <label for="unlikely">Unlikely</label><br>
+        <input type="radio" id="veryUnlikely" name="apply" value="Very Unlikely">
+        <label for="veryUnlikely">Very Unlikely</label><br><br>
+
+        <label for="additionalComments">7. Any additional comments or suggestions?</label><br>
+        <textarea id="additionalComments" name="additionalComments" rows="4" cols="50"></textarea><br><br>
+
+       <center><input type="submit" value="Submit"></center>
+    </form>
+</body>
+</html>

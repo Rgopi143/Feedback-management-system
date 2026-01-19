@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding/Event Party Feedback Form</title>
+    <style>
+       
+
+        .checked {
+                 color: orange;
+               }
+       body {
+           font-family: Arial, sans-serif;
+           margin: 20px;
+           background-color: #f8f8f8;
+           color: #333;
+       }
+       h1 {
+           text-align: center;
+           color: #ff6600;
+       }
+       .form-container {
+           max-width: 6000px;
+           margin: auto;
+           background-color: #fff;
+           padding: 20px;
+           border-radius: 8px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+       }
+       label {
+           font-weight: bold;
+       }
+       .question {
+           margin-bottom: 15px;
+       }
+       .rating input {
+           margin-right: 5px;
+       }
+       textarea {
+           width: 100%;
+           padding: 10px;
+           border-radius: 4px;
+           border: 1px solid #ccc;
+           resize: vertical;
+       }
+       .button {
+           display: block;
+           width: 100%;
+           padding: 10px;
+           background-color: #ff6600;
+           color: white;
+           border: none;
+           font-size: 16px;
+           cursor: pointer;
+           border-radius: 5px;
+       }
+       .button:hover {
+           background-color: #e65c00;
+       }
+   </style>
+</head>
+<body>
+    <h1>Wedding/Event Party Feedback Form</h1>
+    <form>
+        <label for="eventName">Event Name:</label>
+        <input type="text" id="eventName" name="eventName" placeholder="wedding region"><br><br>
+
+        <label for="eventDate">Date:</label>
+        <input type="date" id="eventDate" name="eventDate"><br><br>
+
+        <label>1. How satisfied were you with the overall event?</label><br>
+        <input type="radio" id="verySatisfied" name="satisfaction" value="Very Satisfied">
+        <label for="verySatisfied">Very Satisfied</label><br>
+        <input type="radio" id="satisfied" name="satisfaction" value="Satisfied">
+        <label for="satisfied">Satisfied</label><br>
+        <input type="radio" id="neutral" name="satisfaction" value="Neutral">
+        <label for="neutral">Neutral</label><br>
+        <input type="radio" id="unsatisfied" name="satisfaction" value="Unsatisfied">
+        <label for="unsatisfied">Unsatisfied</label><br>
+        <input type="radio" id="veryUnsatisfied" name="satisfaction" value="Very Unsatisfied">
+        <label for="veryUnsatisfied">Very Unsatisfied</label><br><br>
+
+        <label>2. How would you rate the following aspects of the event?</label><br><br>
+        <label for="food">Food and Drink (1 = Poor, 5 = Excellent):</label>
+        <input type="number" id="food" name="food" min="1" max="5"><br>
+
+        <label for="entertainment">Entertainment:</label>
+        <input type="number" id="entertainment" name="entertainment" min="1" max="5">
+
+        <label for="decorations">Decorations/Theme:</label>
+        <input type="number" id="decorations" name="decorations" min="1" max="5">
+
+        <label for="schedule">Event Schedule:</label>
+        <input type="number" id="schedule" name="schedule" min="1" max="5">
+
+        <label for="atmosphere">Overall Atmosphere:</label>
+        <input type="number" id="atmosphere" name="atmosphere" min="1" max="5"><br><br>
+
+        <label for="enjoyMost">3. What did you enjoy most about the event?</label><br>
+        <textarea id="enjoyMost" name="enjoyMost" rows="4" cols="50"></textarea><br><br>
+
+        <label for="improve">4. How can we improve future events?</label><br>
+        <textarea id="improve" name="improve" rows="4" cols="50"></textarea><br><br>
+
+        <label>5. How likely are you to attend another event organized by us?</label><br>
+        <input type="radio" id="veryLikely" name="attendAgain" value="Very Likely">
+        <label for="veryLikely">Very Likely</label><br>
+        <input type="radio" id="likely" name="attendAgain" value="Likely">
+        <label for="likely">Likely</label><br>
+        <input type="radio" id="neutral" name="attendAgain" value="Neutral">
+        <label for="neutral">Neutral</label><br>
+        <input type="radio" id="unlikely" name="attendAgain" value="Unlikely">
+        <label for="unlikely">Unlikely</label><br>
+        <input type="radio" id="veryUnlikely" name="attendAgain" value="Very Unlikely">
+        <label for="veryUnlikely">Very Unlikely</label><br><br>
+
+        <label for="additionalComments">6. Additional Comments or Suggestions:</label><br>
+        <textarea id="additionalComments" name="additionalComments" rows="4" cols="50"></textarea><br><br>
+
+       <center> <input type="submit" value="Submit"></center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dfe8ea;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .feedback-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .feedback-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .question input, .question select, .question textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .question textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .submit-button {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-container"><br><br><br><br><br>
+        <h1>Event Service Feedback</h1><br>
+        
+        <form action="Terms and Conditions 5.html" >
+            <!-- Question 1: Overall satisfaction -->
+            <div class="question">
+                <label for="satisfaction">How satisfied were you with the event?</label>
+                <select id="satisfaction" name="satisfaction" aria-placeholder="choose">  
+                    <option value="very-satisfied" >Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Dissatisfied</option>
+                    <option value="very-dissatisfied">Very Dissatisfied</option>
+                </select>
+            </div>
+            
+            <!-- Question 2: Event organization -->
+            <div class="question">
+                <label for="organization">How would you rate the event organization?</label>
+                <select id="organization" name="organization">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+            
+            <!-- Question 3: Content relevance -->
+            <div class="question">
+                <label for="content">How relevant was the event content to your needs?</label>
+                <select id="content" name="content">
+                    <option value="very-relevant">Very Relevant</option>
+                    <option value="relevant">Relevant</option>
+                    <option value="somewhat-relevant">Somewhat Relevant</option>
+                    <option value="not-relevant">Not Relevant</option>
+                </select>
+            </div>
+            
+            <!-- Question 4: Would you recommend this event? -->
+            <div class="question">
+                <label for="recommend">Would you recommend this event to others?</label>
+                <select id="recommend" name="recommend">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                </select>
+            </div>
+            
+            <!-- Question 5: Additional comments -->
+            <div class="question">
+                <label for="comments">Any additional comments or suggestions?</label>
+                <textarea id="comments" name="comments" placeholder="Write your comments here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="question">
+                
+                <button type="submit" class="submit-button">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

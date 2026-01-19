@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #bcb8b8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .terms-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+        .terms-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .terms-content {
+            line-height: 1.6;
+            color: #555;
+        }
+        .terms-content ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+       
+        body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .form-container {
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="terms-container"><br><br>
+        <h1>Terms and Conditions</h1>
+
+        <div class="terms-content">
+            <p>By participating in the event feedback survey, you agree to the following terms and conditions:</p>
+            <ul>
+                <li><strong>1. Participation is Voluntary:</strong> Participation in the feedback survey is entirely voluntary. You may choose not to participate without consequence.</li>
+                <li><strong>2. Privacy:</strong> The information you provide in the feedback form will be used solely for event improvement purposes and will not be shared with third parties.</li>
+                <li><strong>3. Anonymity:</strong> Your responses will remain anonymous unless otherwise specified. Any identifiable information shared will be handled in accordance with our privacy policy.</li>
+                <li><strong>4. Feedback Usage:</strong> The feedback you provide may be used to enhance future events and improve our services. Your comments may also be summarized in internal reports, but no individual responses will be shared publicly.</li>
+                <li><strong>5. Accuracy of Information:</strong> You are encouraged to provide accurate and honest feedback to help us improve the event experience.</li>
+                <li><strong>6. Changes to Terms:</strong> We reserve the right to update or change these terms at any time. Any changes will be communicated on this page.</li>
+                <li><strong>7. Acceptance:</strong> By submitting your feedback, you acknowledge that you have read, understood, and agreed to these terms and conditions.</li>
+                <div class="form-container">
+                    <form action="Details page 4.html">
+                      <label>
+                        <input type="checkbox" id="termsCheckbox">
+                        I agree to the terms and conditions
+                      </label>
+                      <br><br>
+                      <button type="submit" id="submitButton" disabled>Submit</button>
+                    </form>
+                  </div>
+                
+                  <script>
+                    const checkbox = document.getElementById('termsCheckbox');
+                    const submitButton = document.getElementById('submitButton');
+                
+                    checkbox.addEventListener('change', () => {
+                      submitButton.disabled = !checkbox.checked;
+                    });
+                  </script>
+                                
+            </ul>
+        </div>          
+        </div>
+    </div>
+
+</body>
+</html>

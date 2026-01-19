@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Event Feedback Form</title>
+<style>
+    h1 {
+        color: #ff6600;
+        text-align: center;
+    }
+    .star-rating {
+            display: inline-block;
+            font-size: 30px; /* Size of the stars */
+            direction: rtl; /* Reverse the order to allow for easier styling */
+        }
+        .star-rating input {
+            display: none; /* Hide radio buttons */
+        }
+        .star-rating label {
+            color: #ccc; /* Default color (unselected star) */
+            cursor: pointer;
+        }
+        .star-rating input:checked ~ label {
+            color: #ffcc00; /* Gold color for selected stars */
+        }
+        .star-rating input:hover ~ label {
+            color: #ffcc00; /* Gold color when hovered over */
+        }
+        .star-rating input:checked:hover ~ label {
+            color: #ffcc00;
+        }
+        .intro-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: black;
+        } .button {
+            display:block;
+            padding: 10px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 25px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #e65c00;  
+        }
+</style>
+
+</head>
+<body>
+
+    <h1>Cultural Event Feedback Form</h1>
+    <!-- Form action points to next page -->
+            <p>Thank you for joining our Cultural celebration !. We value your feedback and would appreciate your thoughts to help us improve future events. Please take a moment to complete this form.</p>
+            <div class="intro-container">
+                <form action="Suggestion-cultural.html"> 
+            <label for="culturalEvent">Cultural Event:</label>
+            <input type="text" id="conferenceTitle" name="conferenceTitle" placeholder="Enter event name"><br><br>
+            <label for="date">Date:</label>
+    <input type="date" id="date" value="number"><br><br>
+            <!-- Question 1 -->
+            <div class="question">
+                <label for="satisfaction">1. Overall, how satisfied were you with the Diwali event?</label><br>
+                <input type="radio" name="satisfaction" value="Very Satisfied" id="very-satisfied"> Very Satisfied<br>
+                <input type="radio" name="satisfaction" value="Satisfied" id="satisfied"> Satisfied<br>
+                <input type="radio" name="satisfaction" value="Neutral" id="neutral"> Neutral<br>
+                <input type="radio" name="satisfaction" value="Unsatisfied" id="unsatisfied"> Unsatisfied
+            </div><br>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <label for="expectations">2. Did the event meet your expectations?</label><br>
+                <input type="radio" name="expectations" value="Yes" id="yes"> Yes<br>
+                <input type="radio" name="expectations" value="No" id="no"> No
+            </div><br>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <label for="liked-elements">3. Which elements of the event did you like the most?</label><br>
+                <input type="text" name="liked-elements" id="liked-elements" placeholder="Write about it in your words"><br><br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label for="takeaway">4. What was your biggest take away from the event?</label><br>
+                <input type="text" name="takeaway" id="takeaway" placeholder="Write about it in your words"><br><br>
+            </div>
+
+            <!-- Question 5: Star Rating -->
+            <div class="question">
+                <label for="rating">5. Overall, how would you rate the Diwali event?</label><br>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label><br><br>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            
+                <center><input type="submit" value="Next" class="button"></center><br>
+            </form>
+        </form>
+    </div>
+
+</body>
+</html>
+
+    
